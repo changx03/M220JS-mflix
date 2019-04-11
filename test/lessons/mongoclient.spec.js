@@ -54,13 +54,13 @@ describe("MongoClient", async () => {
     try {
       testClient = await MongoClient.connect(
         process.env.MFLIX_DB_URI,
-        { connectTimeoutMS: 200, retryWrites: true, useNewUrlParser: true },
+        { connectTimeoutMS: 1000, retryWrites: true, useNewUrlParser: true },
       )
 
       const clientOptions = testClient.s.options
 
       // expect clientOptions to have the correct settings
-      expect(clientOptions.connectTimeoutMS).toBe(200)
+      expect(clientOptions.connectTimeoutMS).toBe(1000)
       expect(clientOptions.retryWrites).toBe(true)
       expect(clientOptions.useNewUrlParser).toBe(true)
     } catch (e) {
@@ -121,7 +121,7 @@ describe("MongoClient", async () => {
     try {
       testClient = await MongoClient.connect(
         process.env.MFLIX_DB_URI,
-        { connectTimeoutMS: 200, retryWrites: true, useNewUrlParser: true },
+        { connectTimeoutMS: 1000, retryWrites: true, useNewUrlParser: true },
       )
 
       // create a database object for the "mflix" database
