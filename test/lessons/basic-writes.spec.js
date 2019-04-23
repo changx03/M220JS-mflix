@@ -59,6 +59,7 @@ describe("Basic Writes", async () => {
       })
     } catch (e) {
       expect(e).not.toBeUndefined()
+      console.log(e.message)
       // we get an error message stating we've tried to insert a duplicate key
       expect(e.errmsg).toContain("E11000 duplicate key error collection")
     }
