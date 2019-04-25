@@ -30,3 +30,14 @@ When set write concern to `majority`, always use timeout
 ```
 
 Always handling `serverSelectionTimeout` error (e.g. one server is down)
+
+## Lecture: Error Handling
+
+* concurrent - duplicated key error
+* distributed - network issues
+
+### Common basic errors
+
+1. MongoError: E11000 duplicate key error collection
+1. Timeout error
+1. MongoWriteConcernError: Not enough data-bearing nodes

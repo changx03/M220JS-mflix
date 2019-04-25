@@ -105,7 +105,7 @@ describe("Error Handling", async () => {
         {
           _id: 6,
         },
-        { wtimeoutMS: 1 },
+        { w: "majority", wtimeout: 1 },
       )
     } catch (e) {
       expect(e).toBeUndefined()
