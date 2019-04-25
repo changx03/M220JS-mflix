@@ -11,5 +11,22 @@ Establishing new connection requires time and resources.
 
 * Reuseable
 * Faster
-* Default size = 100
+* Default maximum pool size = 100
 
+```javascript
+const options = {
+  useNewUrlParser: true,
+  poolSize: 50, // up to 100
+  wtimeout: 2500, // write timeout
+}
+```
+
+## Lecture: Robust Client Configuration
+
+When set write concern to `majority`, always use timeout
+
+```javascript
+{ w: 'majority', wtimeout: 5000 } // 5s
+```
+
+Always handling `serverSelectionTimeout` error (e.g. one server is down)
