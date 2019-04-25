@@ -12,8 +12,6 @@ describe("Projection", async () => {
   })
 
   test("Can perform a country search for three countries", async () => {
-    jest.setTimeout(10000) // this query need more time!
-
     const countriesList = ["Russia", "Japan", "Mexico"]
     const movies = await MoviesDAO.getMoviesByCountry(countriesList)
     expect(movies.length).toEqual(2788)

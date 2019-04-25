@@ -28,7 +28,6 @@ const newerCommentText = "bar bar bar"
 
 describe("Create/Update Comments", async () => {
   beforeAll(async () => {
-    jest.setTimeout(10000)
     await CommentsDAO.injectDB(global.mflixClient)
     await MoviesDAO.injectDB(global.mflixClient)
   })
