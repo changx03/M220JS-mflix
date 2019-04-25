@@ -37,6 +37,6 @@ MongoClient.connect(
     await UsersDAO.injectDB(client)
     await CommentsDAO.injectDB(client)
     app.listen(port, () => {
-      console.log(`listening on port ${port}`)
+      console.log(`listening on http://localhost:${port}`)
     })
   })
